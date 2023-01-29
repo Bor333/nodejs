@@ -1,7 +1,16 @@
-import colors from 'colors'
-//const colors = require('colors')
+import body from './functions.js';
 
-const args = process.argv.slice(2)
+let [a, b] = process.argv.slice(2)
+
+a = parseInt(a)
+b = parseInt(b)
+
+if (!isNaN(a) && !isNaN(b)) {
+    body(a, b)
+} else {
+    throw "Вводить нужно только числа";
+}
 
 
-console.log(`Hello ${colors.green(args.join(', '))}!`)
+
+
